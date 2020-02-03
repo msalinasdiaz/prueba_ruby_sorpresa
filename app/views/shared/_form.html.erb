@@ -1,3 +1,4 @@
+<%= render 'shared/errors' %>
 <div class='row'>
     <div class=“col-md-6 offset-md-3”>
    <%= form_with(model: @todo, local: true ) do |f| %>
@@ -11,6 +12,7 @@
      </div>
      <%= f.submit class: 'btn btn-info' %>
    <% end %>
+    <%= link_to "Back to ToDo List", root_path %>
      </div>
    </div>
    
