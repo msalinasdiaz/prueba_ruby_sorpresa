@@ -1,13 +1,13 @@
 <div class="row row-cols-1 row-cols-md-2">
-    <% @todos.each do  |t| %>
-    <div class="col mb-4">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5><%= t.description %>
-          <p class="card-text">This is aead-in to additional content. This content is a little bit longer.</p><%= t.completed %>
+    <% @todos.each do |todo| %>
+      <div class="col mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= todo.description %></h5>
+            <p class="card-text"><%= todo.completed %></p>
+            <%= link_to "Show", todo_path(todo), class: "btn btn-primary" %>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
-  </div>
+</div>
