@@ -1,0 +1,43 @@
+<h1 class="pb-3">ToDos List</h1>
+<div class="row">
+  <div class="col-sm-6">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">ToDo</th>
+          <th scope="col">Status</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <% @todo_incompleted.each do | todo | %>
+      <tbody>
+        <tr>
+          <td><%= todo.description %></td>
+          <td><%= todo.completed %></td>
+          <th scope="row"><%= todo.created_at %></th>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+  <div class="col-sm-6">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">ToDo</th>
+          <th scope="col">Status</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <% @todo_completed.each do | todo | %>
+      <tbody>
+        <tr>
+          <td><%= todo.description %></td>
+          <td><%= todo.completed %></td>
+          <th scope="row"><%= todo.created_at %></th>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>  
