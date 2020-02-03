@@ -1,15 +1,17 @@
 <div class="row row-cols-1 row-cols-md-2">
-    <% @todos.each do |todo| %>
-      <div class="col mb-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"><%= todo.description %></h5>
-            <p class="card-text"><%= todo.completed %></p>
-            <%= link_to "Show", todo_path(todo), class: "btn btn-primary" %>
-            <%= link_to "Edit", edit_todo_path(todo), class: "btn btn-primary" %>
-            <%= link_to "Delete", todo_path(todo),class: "btn btn-primary",  method: :delete, data: {confirm: "Are you sure?"} %>
-          </div>
+  <% @todos.each do |todo| %>
+    <div class="col mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= todo.description %></h5>
+          <p class="card-text"><%= todo.completed %></p>
+          <%= link_to "Edit", edit_todo_path(todo), class: "btn btn-primary" %>
+          <%= link_to "Show", todo_path(todo), class: "btn btn-primary" %>
+          <%= link_to "Delete", todo_path(todo), class:"btn btn-primary", method: :delete, data: { confirm: "Are you sure?" } %>
+          <%= link_to "Completed", todos_complete_path(todo), class: "btn btn-primary", data: { confirm: "Are you done with this?" } %>
         </div>
       </div>
-    <% end %>
-</div>
+    </div>
+  <% end %>
+  </div>
+  
