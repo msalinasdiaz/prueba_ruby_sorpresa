@@ -6,6 +6,7 @@
             <h5 class="card-title"><%= todo.description %></h5>
             <p class="card-text"><%= todo.completed %></p>
             <%= link_to "Show", todo_path(todo), class: "btn btn-primary" %>
+            <%= link_to "Edit", edit_todo_path(todo), class: "btn btn-primary" %>
           </div>
         </div>
       </div>
